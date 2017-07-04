@@ -1,0 +1,22 @@
+<div class="login">
+    <div class="login-screen">
+        <div class="app-title">
+            <h1>Login</h1>
+        </div>
+        <form #loginForm="ngForm" (ngSubmit)="onSubmit()" novalidate="">
+            <div class="login-form">
+                <div class="control-group">
+                    <input type="text" class="login-field" value="" placeholder="username" id="username" [(ngModel)]="LoginModel.username" name="username" required="" autocomplete="off">
+                    <label class="login-field-icon fui-user" for="login-name"></label>
+                </div>
+
+                <div class="control-group">
+                    <input type="password" class="login-field" value="" placeholder="password" id="password" [(ngModel)]="LoginModel.password" name="password" required="" autocomplete="off">
+                    <label class="login-field-icon fui-lock" for="login-pass"></label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-large btn-block" [disabled]="!loginForm.form.valid">Login</button>
+                <a class="login-link" href="#">Lost your password?</a>
+            </div>
+        </form>
+    </div>
+</div>
